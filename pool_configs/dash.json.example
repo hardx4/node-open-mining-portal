@@ -1,25 +1,14 @@
 {
     "enabled": false,
-    "coin": "litecoin.json",
+    "coin": "dash.json",
 
-    "auxes": [ // Defines auxillery coins
-        {
-            "coin": "lottoshares.json",
-            "daemons": [ // It is reccomended to supply multiple daemons here for redundancy
-                {
-                    "host": "127.0.0.1",
-                    "port": 23327,
-                    "user": "lottosharesrpc",
-                    "password": "By66dCmyX44uUbA7P3qqXJQeT3Ywd8dZ4dJdfgxCAxbg"
-                }
-            ]
-        }
+    "auxes": [
     ],
-    "address": "n4jSe18kZMCdGcZqaYprShXW6EH1wivUK1",
+    "address": "yPDxCP6bMqfs5CTZKn2xEze8T2tbohiQB3",
 
     "rewardRecipients": {
-        "n37vuNFkXfk15uFnGoVyHZ6PYQxppD3QqK": 1.5,
-        "22851477d63a085dbc2398c8430af1c09e7343f6": 0.1
+        "yiiYu4SdXBjASHAyQdKiXRpU948z78rnaw": 1.5,
+        "yRBhWd5KwmC1UDkZzbKXisKnDmWpLm2ahb": 0.1
     },
 
     "paymentProcessing": {
@@ -36,27 +25,27 @@
 
     "ports": {
         "3008": {
-            "diff": 8
+            "diff": 0.03125
         },
         "3032": {
-            "diff": 32,
+            "diff": 0.125,
             "varDiff": {
-                "minDiff": 8,
-                "maxDiff": 512,
+                "minDiff": 0.03125,
+                "maxDiff": 2,
                 "targetTime": 15,
                 "retargetTime": 90,
                 "variancePercent": 30
             }
         },
         "3256": {
-            "diff": 256
+            "diff": 1
         }
     },
 
     "daemons": [
         {
             "host": "127.0.0.1",
-            "port": 19332,
+            "port": 19998,
             "user": "testuser",
             "password": "testpass"
         }
@@ -65,7 +54,7 @@
     "p2p": {
         "enabled": false,
         "host": "127.0.0.1",
-        "port": 19333,
+        "port": 19999,
         "disableTransactions": false
     },
 
@@ -75,9 +64,11 @@
         "port": 3306,
         "user": "me",
         "password": "mypass",
-        "database": "ltc",
+        "database": "dash",
         "checkPassword": false,
         "autoCreateWorker": false
-    }
+    },
+    
+    "//": "That's all, stop editing! Happy mining."
 
 }

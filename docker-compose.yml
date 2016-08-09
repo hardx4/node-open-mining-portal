@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+    unomp:
+      build: .
+      environment:
+        - NODE_ENV=production
+        - REDIS_HOST=unomp-redis
+        - DASHD_HOST=unomp-dashd
+        - DASHD_RPCPASSWORD=bDEgk9YeqEPU9g6hqZFfCd3fHCCD4vQs
+        - SERVICE_NAME=unomp
+      ports:
+        - "3333:3333"
+        - "8080:8080"
+      depends_on:
+        - redis
+
+    redis:
+      container_name: unomp-redis
+      image: redis
+      environment:
+        - SERVICE_NAME=unomp-redis
