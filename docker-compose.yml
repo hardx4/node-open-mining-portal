@@ -26,6 +26,8 @@ services:
 
     dashd:
       container_name: unomp-dashd
+      logging:
+        driver: none
       image: dashpay/dashd
       volumes:
         - unomp-dashd-data:/dash
