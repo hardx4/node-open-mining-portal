@@ -20,7 +20,7 @@ services:
       container_name: unomp-redis
       image: redis
       volumes:
-        - unomp-redis-data:/dash
+        - unomp-redis-data:/data
       environment:
         - SERVICE_NAME=unomp-redis
 
