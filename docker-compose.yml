@@ -6,17 +6,35 @@ services:
       environment:
         - NODE_ENV=production
         - REDIS_HOST=unomp-redis
-        - DASHD_HOST=unomp-dashd
-        - DASHD_RPCPASSWORD=bDEgk9YeqEPU9g6hqZFfCd3fHCCD4vQs
+        - COIND_HOST=unomp-dashd
+        - COIND_PASSWORD=bDEgk9YeqEPU9g6hqZFfCd3fHCCD4vQs
         - SERVICE_NAME=unomp
       ports:
-        - "3333:3333"
+        - "3032:3032"
         - "8080:8080"
       depends_on:
         - redis
+        - dashd
 
     redis:
       container_name: unomp-redis
       image: redis
+      volumes:
+        - unomp-redis-data:/dash
       environment:
         - SERVICE_NAME=unomp-redis
+
+    dashd:
+      container_name: unomp-dashd
+      image: dashpay/dashd
+      volumes:
+        - unomp-dashd-data:/dash
+      ports:
+        - 9999:9999
+      environment:
+        - SERVICE_NAME=unomp-dashd
+        - DISABLEWALLET=0
+        - RPCPASSWORD=bDEgk9YeqEPU9g6hqZFfCd3fHCCD4vQs
+volumes:
+    unomp-redis-data:  #declare a volume named unomp-redis-data
+    unomp-dashd-data:  #declare a volume named unomp-dashd-data

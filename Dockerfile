@@ -1,7 +1,7 @@
 FROM node:0.10.46
 MAINTAINER Holger Schinzel <holger@dash.org>
 
-RUN apt-get update && apt-get install vim -y
+RUN apt-get update && apt-get install vim telnet -y
 
 RUN useradd --user-group --create-home --shell /bin/false app &&\
     npm install --global npm@3.10.5 &&\
@@ -24,7 +24,7 @@ COPY . $HOME/unomp
 RUN chown -R app:app $HOME/*
 USER app
 
-EXPOSE 8080 3333
+EXPOSE 8080 3032
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["node", "init.js"]
