@@ -138,7 +138,8 @@ EOJS
         set_config "pool_configs/dash.json" "address" "Xj14UwwzREn9itDKJLG9n3pjmeecLvBvoM"	string
         set_config "pool_configs/dash.json" "rewardRecipients.XivweVUQ3x3kUXMbQjc2eWrQGx3UN6edjq" "1.0"	float    
         
-        sleep 15
+        echo "Waiting 30 seconds for daemon startup..."
+        sleep 30
 
 fi
 
