@@ -1,0 +1,6 @@
+{
+    "name": "BitCore",
+    "symbol": "BTX",
+    "algorithm": "timetravel",
+    "mposDiffMultiplier": 256
+}

@@ -12,9 +12,9 @@
         "litecoin",
         "scrypt"
     ],
-    "homepage": "https://github.com/zone117x/node-open-mining-portal",
+    "homepage": "https://github.com/hardx4/node-open-mining-portal",
     "bugs": {
-        "url": "https://github.com/zone117x/node-open-mining-portal/issues"
+        "url": "https://github.com/hardx4/node-open-mining-portal/issues"
     },
     "license": "GPL-2.0",
     "author": "Matthew Little",
@@ -28,15 +28,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/zone117x/node-open-mining-portal.git"
+        "url": "https://github.com/hardx4/node-open-mining-portal.git"
     },
     "dependencies": {
-        "stratum-pool": "git://github.com/zone117x/node-stratum-pool.git",
+        "stratum-pool": "git://github.com/hardx4/node-stratum-pool.git",
         "dateformat": "*",
         "node-json-minify": "*",
         "redis": "*",
         "mysql": "*",
-        "async": "*",
+        "async": "1.5.2",
         "express": "*",
         "body-parser": "*",
         "compression": "*",
@@ -44,9 +44,9 @@
         "colors": "*",
         "node-watch": "*",
         "request": "*",
-        "nonce": "*",
-        "bignum": "*",
-        "extend": "*"
+        "nonce": "1.0.3",
+        "bignum": "0.11.0",
+        "extend": "3.0.0"
     },
     "engines": {
         "node": ">=0.10"
