@@ -16,6 +16,7 @@ Usage of this software requires abilities with sysadmin, database admin, coin da
 
 
 #### Table of Contents
+* [Updates](#updates)
 * [Features](#features)
   * [Attack Mitigation](#attack-mitigation)
   * [Security](#security)
@@ -37,6 +38,11 @@ Usage of this software requires abilities with sysadmin, database admin, coin da
 * [License](#license)
 
 
+
+
+### Updates
+
+* Algo timetravel added to the stratum
 
 
 ### Features
