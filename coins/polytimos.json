@@ -1,0 +1,6 @@
+{
+    "name": "Polytimos",
+    "symbol": "POLY",
+    "algorithm": "polytimos",
+    "mposDiffMultiplier": 256
+}
