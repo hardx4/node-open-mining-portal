@@ -1,0 +1,6 @@
+{
+    "name": "BZLCoin",
+    "symbol": "BZL",
+    "algorithm": "tribus",
+    "mposDiffMultiplier": 256
+}
